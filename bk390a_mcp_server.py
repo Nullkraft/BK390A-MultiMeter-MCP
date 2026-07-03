@@ -335,7 +335,7 @@ async def user_list_tools() -> dict[str, Any]:
             "name": tool.name,
             "title": tool.title,
             "description": tool.description,
-            "input_schema": tool.inputSchema,
+            "input_schema": tool.inputSchema,  # How to call a tool: Used by AI
         }
         for tool in tools
     ]
