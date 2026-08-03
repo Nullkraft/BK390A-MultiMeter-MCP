@@ -21,7 +21,7 @@ from typing import Any
 import serial
 from mcp.server.fastmcp import FastMCP
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "mcp-shared"))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "Shared-MCP"))
 from hardware_ports import SERIAL_GLOB_PATTERNS, list_serial_ports, prefer_by_marker, sort_by_marker
 from list_tools import build_list_tools_response
 
@@ -410,11 +410,7 @@ def bk390a_apply_profile(
     refresh_after: bool = False,
     timeout_s: float = 2.0,
 ) -> dict[str, Any]:
-    """Store the expected meter setup for later cached verification.
-
-    The BK 390A serial protocol is output-only, so this records what the
-    technician says the front panel should be; it does not command the meter.
-    """
+    """Store the meter setup for later verification. This reports the actual meter settings."""
     port = resolve_port(port)
     with snapshot_cache_lock:
         expected_profiles[port] = dict(profile)
