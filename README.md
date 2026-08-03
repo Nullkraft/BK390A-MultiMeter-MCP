@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/nullkraft-bk390a-multimeter-mcp-badge.png)](https://mseep.ai/app/nullkraft-bk390a-multimeter-mcp)
+
 # BK390A-MultiMeter-MCP
 
 This repo contains the BK Precision 390A parser and MCP server used during bring-up and meter-based verification.
