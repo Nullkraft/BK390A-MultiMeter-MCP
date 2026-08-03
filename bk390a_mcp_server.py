@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # /// script
+# requires-python = ">=3.12,<3.13"
 # dependencies = [
-#   "mcp[cli]",
+#   "mcp[cli]==1.28.1",
 #   "pyserial",
 # ]
 # ///
